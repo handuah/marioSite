@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mario's Fun House</title>
+	<link rel="shortcut icon" href="mario1_icon.ico" /> <!-- Website Icon -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/ninjaSite.css">
+	<script type="text/javascript" src="js/fontawesome-all.js"></script>
+</head>
+<body>
+	<div id="inner-div">
+		<div id="inner-inner-div">
+			<div id="contents">
+				<div class="container">
+					<div class="row">
+						<div id="image" class="col-md-6 animated fadeInLeftBig"><!-- <img src="img/ninja1.png"> --></div>
+						<div id="text-form" class="col-md-6 mt-5 text-center text-white">
+							<h5 class="animated bounce animated-delay-5s"> MARIO'S FUN HOUSE </h5>
+							<p class="animated tada animated slow animated-delay-5s">Welcome back! Please login to your account.</p>
+							<form>
+								<div class="form-group">
+									<input class="form-control animated tada animated-delay-5s animated slow" type="text" name="username" placeholder="Username">
+									<input class="form-control mt-3 animated tada animated-delay-5s animated slow" type="password" placeholder="Password">
+								</div>
+								 <div class="form-group form-check animated tada animated-delay-5s animated slow">
+									<input type="checkbox" class="form-check-input" id="checkbox1">
+									<label class="form-check-label" >Remember Me</label>
+									<a id="forgotten-pswd" href="#" >Forgotten Password</a>
+								</div>
+								 <div id="buttons" class="mt-5">
+								 	<a href="#" class="btn btn-dark btn-lg animated bounceIn animated-delay-5s animated slow">Login</a>
+								 	<a href="#" class="btn btn-outline-dark btn-lg animated bounceIn animated-delay-5s animated slow">Sign Up</a>
+								 </div>
+							</form> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+
+	<script type="text/javascript">
+		//Get Current Year
+		$('#year').text(new Date().getFullYear());
+
+		//Init ScrollSpy
+		$('body').scrollspy({target: '#main-nav'});
+
+		// Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+	</script>
+</html>
